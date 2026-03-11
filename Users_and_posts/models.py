@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship # связь между полями
-from database import Base
+from Users_and_posts.database import Base
 
 class User(Base):
     __tablename__ = 'users'

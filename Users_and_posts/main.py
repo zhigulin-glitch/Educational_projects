@@ -1,10 +1,10 @@
-from fastapi import FastAPI, HTTPException, Path, Query, Body, Depends
-from typing import Optional, List, Dict, Annotated
+from fastapi import FastAPI, HTTPException, Depends
+from typing import List
 from sqlalchemy.orm import Session
 
 from fastapi.middleware.cors import CORSMiddleware
 from models import Base, User, Post
-from database import  engine, session_local
+from Users_and_posts.database import  engine, session_local
 from schemas import  UserCreate, User as DbUser, PostCreate, PostResponse # as, добавляет псевдоним(делаем это так как повторно импортируем User
 
 app = FastAPI()
