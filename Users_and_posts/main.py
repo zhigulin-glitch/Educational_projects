@@ -3,9 +3,9 @@ from typing import List
 from sqlalchemy.orm import Session
 
 from fastapi.middleware.cors import CORSMiddleware
-from models import Base, User, Post
+from Users_and_posts.models import Base, User, Post
 from Users_and_posts.database import  engine, session_local
-from schemas import  UserCreate, User as DbUser, PostCreate, PostResponse # as, добавляет псевдоним(делаем это так как повторно импортируем User
+from Users_and_posts.schemas import  UserCreate, User as DbUser, PostCreate, PostResponse # as, добавляет псевдоним(делаем это так как повторно импортируем User
 
 app = FastAPI()
 
